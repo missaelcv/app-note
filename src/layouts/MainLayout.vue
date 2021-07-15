@@ -1,5 +1,5 @@
 <template>
-    <q-layout view="lHh Lpr lff" container style="height: 300px" class="shadow-2 rounded-borders">
+    <q-layout view="lHh Lpr lff">
       <q-header elevated class="bg-cyan-8">
         <q-toolbar>
           <q-toolbar-title>Header</q-toolbar-title>
@@ -69,11 +69,7 @@
       </q-drawer>
 
       <q-page-container>
-        <q-page padding>
-          <p v-for="n in 15" :key="n">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil praesentium molestias a adipisci, dolore vitae odit, quidem consequatur optio voluptates asperiores pariatur eos numquam rerum delectus commodi perferendis voluptate?
-          </p>
-        </q-page>
+        <router-view></router-view>
       </q-page-container>
     </q-layout>
 </template>
@@ -83,13 +79,10 @@ import { ref } from 'vue'
 
 export default {
   setup () {
-    const leftDrawerOpen = ref(false)
+    const drawer = ref(false)
 
     return {
-      leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
+      drawer 
     }
   }
 }
