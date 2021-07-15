@@ -1,6 +1,6 @@
 <template>
     <q-layout view="lHh Lpr lff">
-      <q-header elevated class="bg-cyan-8">
+      <q-header elevated class="bg-gray">
         <q-toolbar>
           <q-toolbar-title>Header</q-toolbar-title>
           <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
@@ -11,19 +11,22 @@
         v-model="drawer"
         show-if-above
         :width="200"
-        :breakpoint="400"
-      >
+        :breakpoint="400">
+
         <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
           <q-list padding>
-            <q-item clickable v-ripple>
+
+            <q-item clickable v-ripple to="/" active-class="my-menu-link" exact>
               <q-item-section avatar>
                 <q-icon name="inbox" />
               </q-item-section>
 
+            
               <q-item-section>
-                Inbox
+                Menu
               </q-item-section>
             </q-item>
+          
 
             <q-item active clickable v-ripple>
               <q-item-section avatar>
