@@ -1,8 +1,8 @@
 <template>
     <q-layout view="lHh Lpr lff">
-      <q-header elevated class="bg-gray">
+      <q-header elevated class="bg-primary">
         <q-toolbar>
-          <q-toolbar-title>Bloc De Nota</q-toolbar-title>
+          <q-toolbar-title class="bg-gray">The Note</q-toolbar-title>
           <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
         </q-toolbar>
       </q-header>
