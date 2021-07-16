@@ -27,7 +27,7 @@
        <div class="col-12 text-center">
 
         <q-btn 
-        label="New Note"
+        label="crear Note"
         :ripple="true"
         color="secondary "
         type="submit"/>
@@ -38,6 +38,8 @@
         class="q-ml-sm"
         :ripple="true"
         type="deleter"/>
+
+        
         
         </div>
         </div>
@@ -47,6 +49,8 @@
 
 <script>
 import { ref } from 'vue'
+import { Notify } from 'quasar'
+import { useQuasar } from 'quasar'
 
 const columns = [
   {
@@ -75,6 +79,12 @@ const rows = [
 
 export default {
   setup () {
+     const $q = useQuasar()
+
+    Notify.create({
+  message: 'Danger, Will Robinson! Danger!'
+})
+      
     return {
       filter: ref(''),
       columns,
@@ -89,5 +99,5 @@ export default {
   font-family: 'Times New Roman', Times, serif;
 }
   
-</style>\
+</style>
 
