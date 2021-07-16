@@ -1,5 +1,5 @@
 <template>
-<q-page>
+<q-page padding>
    <div class="q-pa-md">
     <div class="q-gutter-md">
       <q-time v-model="time" />
