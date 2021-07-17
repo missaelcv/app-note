@@ -18,7 +18,7 @@
               </q-item-section>
             
               <q-item-section>
-                Ajustes
+                Inicio
               </q-item-section>
             </q-item>
           
