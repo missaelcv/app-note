@@ -42,6 +42,7 @@
           v-model="name"
           label="Fecha"
           hint="Name and surname"
+            lazy-rules
           :rules="[ val => val && val.length > 0 || 'Please type something']"/>
         </template>
       </q-input>
